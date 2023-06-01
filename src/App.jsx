@@ -9,6 +9,10 @@ const App = () => {
     setList([]);
   };
 
+  const handleRestoreList = () => {
+    setList(data);
+  };
+
   return (
     <main>
       <section className="container">
@@ -24,7 +28,13 @@ const App = () => {
             Clear List
           </button>
         ) : (
-          ''
+          <button
+            className="btn btn-block"
+            type="button"
+            onClick={handleRestoreList}
+          >
+            Restore List
+          </button>
         )}
       </section>
     </main>
