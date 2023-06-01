@@ -1,6 +1,11 @@
 # Birthday Buddy
 
-## About
+## About?
 
-This is a very small app which is a birthday reminder.
-It tracks the data found in data.js, and renders it on screen with the use of 'useState'.
+This is a simple project to practice with state in React.
+
+It renders a list of people found in data.js.
+
+Creating some components to break down each element.
+
+It has the ability to clear the list.

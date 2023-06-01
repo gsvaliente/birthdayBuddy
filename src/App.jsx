@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Person } from './Person';
+import { List } from './List';
 import data from './data';
 
 const App = () => {
@@ -8,21 +8,26 @@ const App = () => {
   const handleResetList = () => {
     setList([]);
   };
-  return (
-    <>
-      <h1>Birthday Reminder {list.length} birthdays today</h1>
-      {list.map((person) => {
-        return <Person key={person.id} {...person} />;
-      })}
 
-      {list.length ? (
-        <button className="btn" onClick={handleResetList}>
-          Reset List
-        </button>
-      ) : (
-        ''
-      )}
-    </>
+  return (
+    <main>
+      <section className="container">
+        <h3>{list.length} birthdays today</h3>
+        <List list={list} />
+
+        {list.length ? (
+          <button
+            className="btn btn-block"
+            type="button"
+            onClick={handleResetList}
+          >
+            Clear List
+          </button>
+        ) : (
+          ''
+        )}
+      </section>
+    </main>
   );
 };
 export default App;
